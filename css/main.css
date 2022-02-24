@@ -1,0 +1,303 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+	background:#FFFFFA;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 4fr 5fr 4fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: auto;
+    width: 100%;
+}
+
+@media screen and (max-width:1500px) {
+	.parent{
+		grid-template-rows: 1fr 3fr 4fr 3fr 1fr;
+	}
+}
+
+/*Header*/
+.div1 { 
+    grid-area: 1 / 1 / 2 / 6; 
+    }
+
+header {
+    width:100%;
+    z-index: 1;
+}
+/*Imagen del logo*/
+.logoT{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+    background:black;
+    z-index: -1;
+}
+
+/*Nav*/
+header nav {
+    width: 90%;
+    max-width: 1000px;
+    margin: -59px auto;
+    background: linear-gradient( #000000, #03ca84);
+	display: flex;
+	flex-direction: row;
+	text-size-adjust: auto;
+	justify-content: center;
+}
+
+.menu_bar {
+	display:none;
+}
+
+header nav ul {
+	overflow:hidden;
+	list-style:none;
+}
+
+header nav ul li {
+	float:left;
+}
+
+header nav ul li a {
+	color:#fff;
+	padding:20px;
+	display:block;
+	text-decoration:none;
+}
+
+header nav ul li span {
+	margin-right:10px;
+}
+
+header nav ul li a:hover {
+	background:#03ca84;
+}
+
+.section1 {
+	padding:20px;
+}
+
+.tlfNav{
+	float: right; 
+	width: 160px; 
+	height: 60px; 
+	z-index: 1;
+}
+
+.tlfNav p{
+	color: aqua;
+}
+/*3 redes derecha del header*/
+.RedesSociales {
+    display: flex;
+    width: unset;
+    height: 60px;
+    float: right;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.facebookHeader{
+	width: 35px;
+	height: 35px;
+}
+.twitterHeader{
+	width: 35px;
+	height: 35px;
+}
+.instagramHeader{
+	width: 35px;
+	height: 35px;
+}
+
+/*Media Jquery para tablets*/
+@media screen and (max-width:1500px) {
+	.logoT{
+		display: none;
+	}
+	
+	header nav {
+		width:auto;
+		height:auto;
+		left:-100%;
+		margin:0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+		z-index: 1;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+		z-index: 1;
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#000000;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		z-index: 1;
+	}
+
+	.menu_bar i {
+		float:right;
+		font-size:40px;
+	}
+
+	.tlfNav{
+		display: none;
+	}
+
+	.RedesSociales img{
+		display: none;
+	}
+}
+
+/*Media Jquery para moviles*/
+@media screen and (max-width:800px ) {
+	.logoT{
+		display: none;
+	}
+	
+	header nav {
+		width:auto;
+		height:auto;
+		left:-100%;
+		margin:0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+		z-index: 1;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+		z-index: 1;
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#000000;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		z-index: 1;
+	}
+
+	.menu_bar i {
+		float:right;
+		font-size:40px;
+	}
+
+	.tlfNav{
+		display: none;
+	}
+
+	.RedesSociales {
+		display: none;
+	}
+}
+
+/*Menu Izquierda*/
+.div2 { 
+    grid-area: 2 / 1 / 5 / 2; 
+	height: auto;
+}
+
+@media screen and (max-width:1500px) {
+	.div2 {
+		display: none;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.div2 {
+		display: none;
+	}
+}
+
+/*Main*/
+.div3 { 
+    grid-area: 2 / 2 / 5 / 5;
+	height: auto; 
+}
+
+@media screen and (max-width:1500px) {
+	.div3 { grid-area: 2 / 1 / 5 / 6; }
+}
+
+@media screen and (max-width:800px) {
+	.div3 { grid-area: 2 / 1 / 5 / 6; }
+}
+
+/*Menu Derecha*/
+.div4 { 
+    grid-area: 2 / 5 / 5 / 6; 
+	height: auto;
+}
+
+@media screen and (max-width:1500px) {
+	.div4 {
+		display: none;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.div4 {
+		display: none;
+	}
+}
+
+/*--Pie de pagina--*/
+
+.parent > .div5 {
+    grid-area: 5 / 1 / 6 / 6; 
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: auto;
+    width: 100%;
+}
+
+.footer {
+    bottom: 0;
+    background-color: black;
+}
